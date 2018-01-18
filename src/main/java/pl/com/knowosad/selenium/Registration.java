@@ -12,8 +12,8 @@ public class Registration {
 
     public static void main(String[] args) throws IOException, InterruptedException {
 
-        WebDriver driver = new FirefoxDriver();
         System.setProperty("webdriver.gecko.driver", "C:\\Users\\freszczypior\\IdeaProjects\\ForSelenium\\geckodriver.exe");
+        WebDriver driver = new FirefoxDriver();
 
         goTo(driver, "http://demoqa.com//");
 
@@ -57,7 +57,7 @@ public class Registration {
 
     private static void pushTheButton(WebDriver driver, String buttonId) {
         wait(driver, buttonId);
-        driver.findElement(By.id(buttonId)).submit();
+        driver.findElement(By.id(buttonId)).click();
     }
 
     private static void inputText(WebDriver driver, String elementId, String text) {
